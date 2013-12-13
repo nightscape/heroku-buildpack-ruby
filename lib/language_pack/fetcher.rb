@@ -28,7 +28,7 @@ module LanguagePack
 
     private
     def curl_command(command)
-      "set -o pipefail; curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 20 #{command}"
+      "set -o pipefail; curl -k --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 20 #{command}"
     end
 
     def load_config
